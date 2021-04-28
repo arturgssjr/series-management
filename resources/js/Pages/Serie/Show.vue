@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Seasons from "@/Pages/Series/Seasons";
+import Seasons from "@/Pages/Serie/Seasons";
 
 export default {
     name: "Show",
