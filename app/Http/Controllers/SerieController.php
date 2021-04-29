@@ -10,9 +10,9 @@ class SerieController extends Controller
 {
     public function index(): Response
     {
-        $series = Serie::all();
-
-        return Inertia::render('Serie/Index', compact('series'));
+        return Inertia::render('Serie/Index', [
+            'paginate' => Serie::paginate(5)
+        ]);
     }
 
     /**

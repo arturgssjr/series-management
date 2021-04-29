@@ -10,8 +10,9 @@ class MovieController extends Controller
 {
     public function index(): Response
     {
-        $movies = Movie::all();
-        return Inertia::render('Movie/Index', compact('movies'));
+        return Inertia::render('Movie/Index', [
+            'paginate' => Movie::paginate(5)
+        ]);
     }
 
     /**
