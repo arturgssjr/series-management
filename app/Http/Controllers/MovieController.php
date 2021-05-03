@@ -8,9 +8,14 @@ use Inertia\{Inertia, Response};
 
 class MovieController extends Controller
 {
+    public function __construct(
+        public string $routeName = 'movies'
+    ) {}
+
     public function index(): Response
     {
         return Inertia::render('Movie/Index', [
+            'routeName' => $this->routeName,
             'paginate' => Movie::paginate(5)
         ]);
     }

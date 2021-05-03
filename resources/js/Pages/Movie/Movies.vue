@@ -5,9 +5,9 @@
 </template>
 <script>
 export default {
-    name: 'Movies',
-    props: {
-        movies: Object
-    }
-}
+  name: "Movies",
+  props: {
+    movies: Object
+  }
+};
 </script>

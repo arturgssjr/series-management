@@ -9,7 +9,7 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <DescriptionTable :data="paginate.data"/>
+                    <DescriptionTable :data="paginate.data" :routeName="routeName"/>
 
                     <div v-if="!shouldHidePagination" class="px-6 pb-4 bg-white">
                         <Pagination :data="paginate" />
@@ -33,6 +33,7 @@ export default {
     DescriptionTable,
   },
   props: {
+    routeName: String,
     paginate: Object
   },
   computed: {

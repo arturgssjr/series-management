@@ -90,13 +90,13 @@
 </style>
 
 <script>
-    export default {
-        props: {
-            canLogin: Boolean,
-            canRegister: Boolean,
-            laravelVersion: String,
-            phpVersion: String,
-            applicationName: String,
-        }
-    }
+export default {
+  props: {
+    canLogin: Boolean,
+    canRegister: Boolean,
+    laravelVersion: String,
+    phpVersion: String,
+    applicationName: String,
+  }
+};
 </script>
