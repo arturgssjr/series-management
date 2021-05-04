@@ -1,34 +1,45 @@
 <template>
-    <AppLayout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Movies
-            </h2>
-        </template>
+    <AdminLayout>
+<!--        <template #header>-->
+<!--            <h2 class="font-semibold text-xl text-gray-800 leading-tight">-->
+<!--                Movies-->
+<!--            </h2>-->
+<!--        </template>-->
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <DescriptionTable :data="paginate.data" :routeName="routeName"/>
+<!--        <div class="py-12">-->
+<!--            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">-->
+<!--                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">-->
+<!--                    <DescriptionTable :data="paginate.data" :routeName="routeName"/>-->
 
-                    <div v-if="!shouldHidePagination" class="px-6 pb-4 bg-white">
-                        <Pagination :data="paginate"/>
-                    </div>
-                </div>
+<!--                    <div v-if="!shouldHidePagination" class="px-6 pb-4 bg-white">-->
+<!--                        <Pagination :data="paginate"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="flex flex-wrap mt-4">
+            <div class="w-full mb-12 px-4">
+                <CardTable />
+            </div>
+            <div class="w-full mb-12 px-4">
+                <CardTable color="dark" />
             </div>
         </div>
-    </AppLayout>
+    </AdminLayout>
 </template>
 
 <script>
-import AppLayout from "@/Layouts/AppLayout";
+import AdminLayout from "@/Layouts/Admin";
+import CardTable from "@/Components/Cards/CardTable.vue";
+
 import Pagination from "@/Components/Pagination";
 import DescriptionTable from "@/Components/DescriptionTable";
 
 export default {
   name: "Index",
   components: {
-    AppLayout,
+    AdminLayout,
+      CardTable,
     Pagination,
     DescriptionTable,
   },
