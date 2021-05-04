@@ -1,5 +1,5 @@
 <template>
-    <AdminLayout>
+    <AdminLayout description="Movies" routeLink="movies.index">
 <!--        <template #header>-->
 <!--            <h2 class="font-semibold text-xl text-gray-800 leading-tight">-->
 <!--                Movies-->
@@ -21,9 +21,6 @@
             <div class="w-full mb-12 px-4">
                 <CardTable />
             </div>
-            <div class="w-full mb-12 px-4">
-                <CardTable color="dark" />
-            </div>
         </div>
     </AdminLayout>
 </template>
@@ -32,19 +29,18 @@
 import AdminLayout from "@/Layouts/Admin";
 import CardTable from "@/Components/Cards/CardTable.vue";
 
-import Pagination from "@/Components/Pagination";
-import DescriptionTable from "@/Components/DescriptionTable";
+// import Pagination from "@/Components/Pagination";
+// import DescriptionTable from "@/Components/DescriptionTable";
 
 export default {
   name: "Index",
   components: {
     AdminLayout,
-      CardTable,
-    Pagination,
-    DescriptionTable,
+    CardTable,
+    // Pagination,
+    // DescriptionTable,
   },
   props: {
-    routeName: String,
     paginate: Object,
   },
   computed: {

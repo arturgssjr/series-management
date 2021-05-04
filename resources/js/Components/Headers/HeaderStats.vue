@@ -21,7 +21,7 @@
                         <CardStats
                             statArrow="down"
                             statDescripiron="Since last week"
-                            statIconColor="bg-yellow-500"
+                            statIconColor="bg-orange-500"
                             statIconName="fas fa-chart-pie"
                             statPercent="3.48"
                             statPercentColor="text-red-500"
@@ -36,7 +36,7 @@
                             statIconColor="bg-pink-500"
                             statIconName="fas fa-users"
                             statPercent="1.10"
-                            statPercentColor="text-yellow-500"
+                            statPercentColor="text-orange-500"
                             statSubtitle="SALES"
                             statTitle="924"
                         />

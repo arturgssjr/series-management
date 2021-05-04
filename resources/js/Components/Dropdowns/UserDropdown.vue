@@ -1,65 +1,63 @@
 <template>
-    <div>
-        <a
-            ref="btnDropdownRef"
-            class="text-blueGray-500 block"
-            href="#pablo"
-            v-on:click="toggleDropdown($event)"
-        >
-            <div class="items-center flex">
+  <div>
+    <a
+        ref="btnDropdownRef"
+        class="text-blueGray-500 block"
+        href="#"
+        @click="toggleDropdown($event)"
+    >
+      <div class="items-center flex">
         <span
             class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
         >
           <img
-              :src="image"
+              :src="$page.props.user.profile_photo_url"
               alt="..."
               class="w-full rounded-full align-middle border-none shadow-lg"
           />
         </span>
-            </div>
-        </a>
-        <div
-            ref="popoverDropdownRef"
-            class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
-            v-bind:class="{
+      </div>
+    </a>
+    <div
+        ref="popoverDropdownRef"
+        class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+        v-bind:class="{
                 hidden: !dropdownPopoverShow,
                 block: dropdownPopoverShow,
             }"
-        >
-            <inertia-link
-                :href="route('profile.show')"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            >
-                Profile
-            </inertia-link>
-            <inertia-link
-                v-if="$page.props.jetstream.hasApiFeatures"
-                :href="route('api-tokens.index')"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            >
-                API Tokens
-            </inertia-link>
-            <div class="h-0 my-2 border border-solid border-blueGray-100"/>
-            <form method="POST" @submit.prevent="logout">
-                <button
-                    class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                    Log Out
-                </button>
-            </form>
-        </div>
+    >
+      <inertia-link
+          :href="route('profile.show')"
+          class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+      >
+        Profile
+      </inertia-link>
+      <inertia-link
+          v-if="$page.props.jetstream.hasApiFeatures"
+          :href="route('api-tokens.index')"
+          class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+      >
+        API Tokens
+      </inertia-link>
+      <div class="h-0 my-2 border border-solid border-blueGray-100"/>
+      <a
+          class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+          href="#"
+          @click="logout"
+      >
+        Log Out
+      </a>
     </div>
+  </div>
 </template>
 
 <script>
 import {createPopper} from "@popperjs/core";
 
-import image from "@/../assets/img/team-1-800x800.jpg";
-
 export default {
   data() {
     return {
       dropdownPopoverShow: false,
-      image: image,
     };
   },
   methods: {
@@ -78,5 +76,8 @@ export default {
       this.$inertia.post(route("logout"));
     },
   },
+  mounted() {
+    console.log(this.$page.props);
+  }
 };
 </script>

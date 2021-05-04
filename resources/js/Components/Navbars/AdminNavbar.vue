@@ -8,10 +8,10 @@
         >
             <!-- Brand -->
             <inertia-link
+                :href="route(routeLink)"
                 class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
-                :href="route('dashboard')"
             >
-                Dashboard
+                {{ description }}
             </inertia-link>
             <!-- Form -->
             <form
@@ -24,15 +24,15 @@
             <i class="fas fa-search"></i>
           </span>
                     <input
-                        type="text"
-                        placeholder="Search here..."
                         class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
+                        placeholder="Search here..."
+                        type="text"
                     />
                 </div>
             </form>
             <!-- User -->
             <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
-                <UserDropdown />
+                <UserDropdown/>
             </ul>
         </div>
     </nav>
@@ -43,6 +43,10 @@
 import UserDropdown from "@/Components/Dropdowns/UserDropdown.vue";
 
 export default {
+  props: {
+    description: String,
+    routeLink: String,
+  },
   components: {
     UserDropdown,
   },
