@@ -20192,8 +20192,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Components_Dropdowns_NotificationDropdown_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Components/Dropdowns/NotificationDropdown.vue */ "./resources/js/Components/Dropdowns/NotificationDropdown.vue");
-/* harmony import */ var _Components_Dropdowns_UserDropdown_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Components/Dropdowns/UserDropdown.vue */ "./resources/js/Components/Dropdowns/UserDropdown.vue");
+/* harmony import */ var _Components_Dropdowns_NotificationDropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Components/Dropdowns/NotificationDropdown */ "./resources/js/Components/Dropdowns/NotificationDropdown.vue");
+/* harmony import */ var _Components_Dropdowns_UserDropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Components/Dropdowns/UserDropdown */ "./resources/js/Components/Dropdowns/UserDropdown.vue");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -20208,8 +20208,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   components: {
-    NotificationDropdown: _Components_Dropdowns_NotificationDropdown_vue__WEBPACK_IMPORTED_MODULE_0__.default,
-    UserDropdown: _Components_Dropdowns_UserDropdown_vue__WEBPACK_IMPORTED_MODULE_1__.default
+    NotificationDropdown: _Components_Dropdowns_NotificationDropdown__WEBPACK_IMPORTED_MODULE_0__.default,
+    UserDropdown: _Components_Dropdowns_UserDropdown__WEBPACK_IMPORTED_MODULE_1__.default
   }
 });
 

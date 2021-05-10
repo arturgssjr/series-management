@@ -207,8 +207,8 @@
 ); }
 
 <script>
-import NotificationDropdown from "@/Components/Dropdowns/NotificationDropdown.vue";
-import UserDropdown from "@/Components/Dropdowns/UserDropdown.vue";
+import NotificationDropdown from "@/Components/Dropdowns/NotificationDropdown";
+import UserDropdown from "@/Components/Dropdowns/UserDropdown";
 
 export default {
   data() {
