@@ -8,14 +8,9 @@ use Inertia\{Inertia, Response};
 
 class SerieController extends Controller
 {
-    public function __construct(
-        public string $routeName = 'series'
-    ) {}
-
     public function index(): Response
     {
         return Inertia::render('Serie/Index', [
-            'routeName' => $this->routeName,
             'paginate' => Serie::paginate(5)
         ]);
     }
